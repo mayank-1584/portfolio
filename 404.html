@@ -3,7 +3,10 @@
   <head>
     <script>
       var path = window.location.pathname;
-      window.location.replace("/portfolio/" + (path ? "?redirect=" + path : ""));
+      var redirectTo = "/portfolio/index.html" + 
+        (path ? "?p=" + encodeURIComponent(path) : "");
+
+      window.location.replace(redirectTo);
     </script>
   </head>
   <body></body>
