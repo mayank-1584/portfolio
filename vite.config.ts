@@ -14,7 +14,7 @@ export default defineConfig({
     tailwindcss(),
     tsconfigPaths(),
   ],
-  base: "/",
+  base: "/5000",
   build: {
     outDir: "dist",
   },
