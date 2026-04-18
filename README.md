@@ -5,7 +5,7 @@ A modern, high-performance developer portfolio built with **React + Vite + TanSt
 ---
 
 ## 🌐 Live Demo
-👉 (https://portfolio-neerajpepsu.vercel.app/)
+👉 (https://portfolio-sand-three-43.vercel.app/))
 
 ---
 
