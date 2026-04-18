@@ -1,4 +1,5 @@
-﻿import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
+import { Oneko } from '@/components/Oneko';
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
@@ -31,6 +32,9 @@ function RootComponent() {
   return (
     <>
       <Outlet />
+      <Oneko />
     </>
   );
 }
+
+
