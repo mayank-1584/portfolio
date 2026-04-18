@@ -61,10 +61,10 @@ export function PlayerCard() {
           {/* Social pills + CTA */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex gap-1.5">
-              {[Github, Linkedin, Twitter, Instagram, Dribbble].map((Icon, i) => (
+              {[{Icon: Github, href: "https://github.com/mayank-1584"}, {Icon: Linkedin, href: "https://www.linkedin.com/in/mayank-sharma-ab539b283/"}, {Icon: Twitter, href: "#"}, {Icon: Instagram, href: "#"}, {Icon: Dribbble, href: "#"}].map(({Icon, href}, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
                   aria-label="social"
                   className="w-8 h-8 rounded-full glass border border-white/10 flex items-center justify-center hover:border-foreground/40 hover:-translate-y-0.5 transition-all"
                 >

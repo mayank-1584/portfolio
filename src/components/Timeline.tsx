@@ -50,10 +50,10 @@ export function Timeline() {
             />
             <span className="font-mono text-xs text-neon-cyan tracking-widest">{it.year}</span>
             <h3 className="text-lg font-bold mt-1">{it.title}</h3>
-            <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{it.body}</p>
+            <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{it.from}</p>
           </motion.div>
         ))}
-      </div>
-    </Section>
+      </div><div className="mt-10"><a href="/portfolio/Mayanksharma.pdf" target="_blank" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all">Download Full Resume</a></div></Section>
   );
 }
+
