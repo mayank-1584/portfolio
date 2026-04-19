@@ -17,7 +17,7 @@ export function Hero() {
           </div>
           <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-[10px] uppercase tracking-wider font-medium text-green-500">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-            Available for Freelance
+            Available
           </div>
         </div>
 
@@ -54,7 +54,7 @@ export function Hero() {
             </span>
           </a>
           <a
-            href="/portfolio/Mayanksharma.pdf"
+            href="https://mayanksharma.tiiny.site"
             target="_blank"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground transition-all hover:bg-foreground/5"
           >

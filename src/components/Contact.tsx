@@ -6,10 +6,34 @@ import { Section } from "./Section";
 export function Contact() {
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  // ✅ added state (required for sending data)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  // ✅ updated submit handler (API call)
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
+
+    try {
+      const res = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setSent(false), 3000);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
@@ -30,6 +54,10 @@ export function Contact() {
             <input
               required
               type="text"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               className="mt-1 w-full bg-transparent border-b border-border focus:border-neon-cyan outline-none py-2 transition-colors"
               placeholder="Your name"
             />
@@ -41,6 +69,10 @@ export function Contact() {
             <input
               required
               type="email"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               className="mt-1 w-full bg-transparent border-b border-border focus:border-neon-cyan outline-none py-2 transition-colors"
               placeholder="you@domain.com"
             />
@@ -52,6 +84,10 @@ export function Contact() {
             <textarea
               required
               rows={4}
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
               className="mt-1 w-full bg-transparent border-b border-border focus:border-neon-cyan outline-none py-2 transition-colors resize-none"
               placeholder="Tell me about your project…"
             />
@@ -102,4 +138,4 @@ export function Contact() {
       </div>
     </Section>
   );
-}
+}   
