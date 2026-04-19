@@ -24,7 +24,7 @@ const projects = [
     tech: ["TypeScript", "ClickHouse", "React"],
     accent: "var(--neon-pink)",
     github: "https://github.com/mayank-1584/_rishi_printer",
-    ExternalLink: "https://mayank-1584.github.io/_rishi_printer/",
+    link: "https://mayank-1584.github.io/_rishi_printer/",
   },
   {
     title: "NA",
