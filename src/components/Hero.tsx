@@ -54,7 +54,7 @@ export function Hero() {
             </span>
           </a>
           <a
-            href="/portfolio/Mayanksharma.pdf"
+            href="public/Mayanksharma.pdf"
             target="_blank"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground transition-all hover:bg-foreground/5"
           >
