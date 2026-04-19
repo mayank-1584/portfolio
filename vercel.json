@@ -3,8 +3,5 @@
     "api/*.cjs": {
       "runtime": "@vercel/node@3.0.0"
     }
-  },
-  "engines": {
-    "node": ">=24"
   }
 }
