@@ -11,8 +11,8 @@ const cards = [
   },
   {
     icon: Layers,
-    title: "Full-Stack",
-    body: "From slick React UIs to scalable backends. End-to-end ownership of products.",
+    title: "AWS",
+    body: "From deploying models/site to scalable. End-to-end ownership of products.",
     color: "var(--neon-purple)",
   },
   {
