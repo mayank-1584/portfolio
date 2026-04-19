@@ -53,7 +53,7 @@ export function Timeline() {
             <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{it.from}</p>
           </motion.div>
         ))}
-      </div><div className="mt-10"><a href="/portfolio/Mayanksharma.pdf" target="_blank" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all">Download Full Resume</a></div></Section>
+      </div><div className="mt-10"><a href="https://mayanksharma.tiiny.site" target="_blank" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all">Download Full Resume</a></div></Section>
   );
 }
 
