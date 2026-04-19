@@ -17,7 +17,7 @@ export function Hero() {
           </div>
           <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-[10px] uppercase tracking-wider font-medium text-green-500">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-            Available for Freelance
+            Available
           </div>
         </div>
 
