@@ -5,7 +5,7 @@ A modern, high-performance developer portfolio built with **React + Vite + TanSt
 ---
 
 ## 🌐 Live Demo
-👉 (mayanksharma.space))
+👉 (link:mayanksharma.space))
 
 ---
 
