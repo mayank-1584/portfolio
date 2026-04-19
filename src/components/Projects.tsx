@@ -24,7 +24,7 @@ const projects = [
     tech: ["TypeScript", "ClickHouse", "React"],
     accent: "var(--neon-pink)",
     github: "https://github.com/mayank-1584/_rishi_printer",
-    ExternalLink: "https://mayank-1584.github.io/_rishi_printer/",
+    link: "https://mayank-1584.github.io/_rishi_printer/",
   },
   {
     title: "NA",
@@ -91,7 +91,7 @@ function TiltCard({ project, i }: { project: (typeof projects)[number]; i: numbe
             >           
   <Github className="w-4 h-4" />
 </a>
-            <a href="#" aria-label="Live demo" className="w-8 h-8 rounded-md glass flex items-center justify-center hover:text-neon-cyan transition-colors">
+            <a href="https://mayank-1584.github.io/_rishi_printer/" aria-label="Live demo" className="w-8 h-8 rounded-md glass flex items-center justify-center hover:text-neon-cyan transition-colors">
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
