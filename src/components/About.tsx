@@ -17,8 +17,8 @@ const cards = [
   },
   {
     icon: Rocket,
-    title: "Performance",
-    body: "Obsessed with milliseconds, smooth interactions, and clean architecture.",
+    title: "Compititive programming",
+    body: "I participate in programming contests to sharpen problem-solving skills and improve coding efficiency.",
     color: "var(--neon-pink)",
   },
 ];
