@@ -61,7 +61,7 @@ export function PlayerCard() {
           {/* Social pills + CTA */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex gap-1.5">
-              {[{Icon: Github, href: "https://github.com/mayank-1584"}, {Icon: Linkedin, href: "https://www.linkedin.com/in/mayank-sharma-ab539b283/"}, {Icon: Twitter, href: "#"}, {Icon: Instagram, href: "#"}, {Icon: Dribbble, href: "#"}].map(({Icon, href}, i) => (
+              {[{Icon: Github, href: "https://github.com/mayank-1584"}, {Icon: Linkedin, href: "https://www.linkedin.com/in/mayank-sharma-ab539b283/"}, {Icon: Twitter, href: "https://leetcode.com/u/tGwSk8GHrt/"}, {Icon: Instagram, href: "https://www.instagram.com/mayank_1584/"}, {Icon: Dribbble, href: "https://codeforces.com/profile/mksharmakaku1584"}].map(({Icon, href}, i) => (
                 <a
                   key={i}
                   href={href}
