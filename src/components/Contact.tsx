@@ -110,7 +110,7 @@ export function Contact() {
           className="md:col-span-2 space-y-3"
         >
           {[
-            { Icon: Mail, label: "mksharmakaku1584@gmail.com", href: "mailto:mksharmakaku1584@gmail.com" },
+            { Icon: Mail, label: "mksharmakaku1584@gmail.com", href: "mailto:mksharma6273@gmail.com" },
             { Icon: Github, label: "mayank-1584", href: "https://github.com/mayank-1584" },
             { Icon: Linkedin, label: "Mayank Sharma", href: "https://www.linkedin.com/in/mayank-sharma-ab539b283/" },
           ].map(({ Icon, label, href }) => (
