@@ -17,20 +17,14 @@ const items = [
     title: "B.tech. Computer Science",
     from: "Delhi Technical Campus",
   },
+  
 ];
 
 export function Timeline() {
   return (
     <Section id="experience" eyebrow="Experience" title="The journey so far">
       <div className="relative pl-8">
-        {/* Line */}
-        <div
-          className="absolute left-2 top-2 bottom-2 w-px"
-          style={{
-            background:
-              "linear-gradient(180deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink))",
-          }}
-        />
+        
         {items.map((it, i) => (
           <motion.div
             key={it.year}
@@ -42,7 +36,7 @@ export function Timeline() {
           >
             {/* Dot */}
             <div
-              className="absolute -left-[1.6rem] top-1.5 w-3 h-3 rounded-full"
+              className="absolute -left-[1.8rem] top-[8px] w-3 h-3 rounded-full"
               style={{
                 background: "var(--neon-cyan)",
                 boxShadow: "0 0 12px var(--neon-cyan), 0 0 24px var(--neon-cyan)",
@@ -56,4 +50,3 @@ export function Timeline() {
       </div><div className="mt-10"><a href="https://mayanksharma.tiiny.site" target="_blank" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all">Download Full Resume</a></div></Section>
   );
 }
-
