@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram, Twitter, Dribbble, MessageCircle,Trophy,Target } from "lucide-react";
-import avatar from "@/assets/avatar.jpg";
+import avatar from "@/assets/avatarv.2.png";
 
 export function PlayerCard() {
   return (
