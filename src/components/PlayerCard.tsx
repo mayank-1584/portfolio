@@ -26,7 +26,7 @@ export function PlayerCard() {
           <div className="relative rounded-2xl overflow-hidden mb-5 aspect-square">
             <img
               src={avatar}
-              alt="Alex Voss avatar"
+              alt="mayank sharma avatar"
               width={512}
               height={512}
               className="w-full h-full object-cover"
