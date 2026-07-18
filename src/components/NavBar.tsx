@@ -11,7 +11,7 @@ const sections = [
   { id: "contact", label: "Contact" },
 ];
 
-// claude bhai ke dane
+// How far you need to scroll (in px) before the nav docks to the side.
 const DOCK_THRESHOLD = 160;
 
 export function NavBar() {
@@ -59,25 +59,28 @@ export function NavBar() {
           y: 0,
           opacity: 1,
           top: docked ? "50%" : "1rem",
-          right: docked ? "1.25rem" : "1rem",
-          left: docked ? "auto" : "0rem",
-          x: 0,
           translateY: docked ? "-50%" : "0%",
         }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        style={{ position: "fixed" }}
-        className="z-50 hidden md:block"
+        style={{ position: "fixed", left: 0, right: 0 }}
+        className="z-50 hidden md:block pointer-events-none"
       >
-        <motion.div
-          layout
-          transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className={`glass border border-white/10 flex ${
-            docked
-              ? "flex-col items-center gap-1 rounded-full px-2 py-3"
-              : "flex-row items-center gap-1 rounded-full px-2 py-1.5 max-w-5xl mx-auto"
+        {/* This wrapper spans the row so we can align left (normal) vs right (docked),
+            but it never sets a width on the pill itself, so the pill always hugs its content. */}
+        <div
+          className={`px-4 flex ${
+            docked ? "justify-end" : "justify-start lg:pl-[28%]"
           }`}
-          style={docked ? { marginLeft: "auto" } : undefined}
         >
+          <motion.div
+            layout
+            transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className={`glass border border-white/10 flex pointer-events-auto ${
+              docked
+                ? "flex-col items-center gap-1 rounded-full px-2 py-3"
+                : "flex-row items-center gap-1 rounded-full px-2 py-1.5"
+            }`}
+          >
           {/* Section pills / dots */}
           <motion.nav
             layout
@@ -186,7 +189,8 @@ export function NavBar() {
               )}
             </button>
           </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </motion.header>
 
       {/* ---------- Mobile: unchanged top bar + dropdown menu ---------- */}
