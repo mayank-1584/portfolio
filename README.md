@@ -104,7 +104,7 @@ This project is deployed on **Vercel** for seamless performance and routing supp
 
 ## 📸 Preview
 
-image.png
+<img src="image.png" alt="Preview" width="800"/>
 
 ---
 
