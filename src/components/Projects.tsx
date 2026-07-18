@@ -6,43 +6,69 @@ import { Section } from "./Section";
 const projects = [
   {
     title: "Credit Risk Model",
-    description: "Built a machine learning-based Credit Risk Prediction system using Logistic Regression with hyperparameter tuning to classify loan applicants as high or low risk.",
+    description:
+      "Built a machine learning-based Credit Risk Prediction system using Logistic Regression with hyperparameter tuning to classify loan applicants as high or low risk.",
     tech: ["Flask", "GridSearchCV", "ElasticBeanStalk"],
     accent: "var(--neon-cyan)",
     github: "https://github.com/mayank-1584/credit_risk_model",
+    live: "https://mayanksharma.space",
   },
   {
     title: "Test Forest Fire",
-    description: "Predicts FWI based on Temperature, RH, Ws, Rain, FFMC, DMC, ISI, Classes, and Region.Simple web interface using HTML.Uses a Ridge Regression model.",
-    tech: ["Linear Regresion", "Flask", "ElasticBeanStalk"],
+    description:
+      "Predicts FWI based on Temperature, RH, Ws, Rain, FFMC, DMC, ISI, Classes, and Region. Simple web interface using HTML. Uses a Ridge Regression model.",
+    tech: ["Ridge Regression", "Flask", "ElasticBeanStalk"],
     accent: "var(--neon-purple)",
     github: "https://github.com/mayank-1584/ml-1testforestfire",
+    live: "https://mayanksharma.space",
   },
   {
     title: "Rishi Printer",
     description: "Real-time product based website.",
-    tech: ["TypeScript", "ClickHouse", "React"],
+    tech: ["TypeScript", "React", "Tailwind CSS"],
     accent: "var(--neon-pink)",
     github: "https://github.com/mayank-1584/_rishi_printer",
-    link: "https://mayank-1584.github.io/_rishi_printer/",
+    live: "https://mayank-1584.github.io/_rishi_printer",
   },
   {
     title: "NA",
-    description: "working on it",
+    description: "Working on it...",
     tech: ["Con", "fiden", "tial"],
     accent: "var(--neon-cyan)",
     github: "#",
+    live: "#",
   },
 ];
 
-function TiltCard({ project, i }: { project: (typeof projects)[number]; i: number }) {
+function TiltCard({
+  project,
+  i,
+}: {
+  project: (typeof projects)[number];
+  i: number;
+}) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const rotateX = useSpring(useTransform(y, [-50, 50], [8, -8]), { stiffness: 200, damping: 20 });
-  const rotateY = useSpring(useTransform(x, [-50, 50], [-8, 8]), { stiffness: 200, damping: 20 });
+
+  const rotateX = useSpring(
+    useTransform(y, [-50, 50], [8, -8]),
+    {
+      stiffness: 200,
+      damping: 20,
+    }
+  );
+
+  const rotateY = useSpring(
+    useTransform(x, [-50, 50], [-8, 8]),
+    {
+      stiffness: 200,
+      damping: 20,
+    }
+  );
 
   function handleMove(e: MouseEvent<HTMLDivElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
+
     x.set(e.clientX - rect.left - rect.width / 2);
     y.set(e.clientY - rect.top - rect.height / 2);
   }
@@ -67,11 +93,16 @@ function TiltCard({ project, i }: { project: (typeof projects)[number]; i: numbe
         className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md -z-10"
         style={{ background: project.accent }}
       />
+
       <div
         className="glass rounded-2xl p-6 h-full border border-border/60 group-hover:border-transparent transition-colors duration-300"
         style={{ transformStyle: "preserve-3d" }}
       >
-        <div className="flex items-start justify-between mb-4" style={{ transform: "translateZ(20px)" }}>
+        {/* Header */}
+        <div
+          className="flex items-start justify-between mb-4"
+          style={{ transform: "translateZ(20px)" }}
+        >
           <div
             className="w-10 h-10 rounded-lg flex items-center justify-center font-mono text-xs"
             style={{
@@ -81,34 +112,53 @@ function TiltCard({ project, i }: { project: (typeof projects)[number]; i: numbe
           >
             0{i + 1}
           </div>
+
           <div className="flex gap-2">
+            {/* GitHub */}
             <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
               className="w-8 h-8 rounded-md glass flex items-center justify-center hover:text-neon-cyan transition-colors"
-            >           
-  <Github className="w-4 h-4" />
-</a>
-            <a href="https://mayank-1584.github.io/_rishi_printer/" aria-label="Live demo" className="w-8 h-8 rounded-md glass flex items-center justify-center hover:text-neon-cyan transition-colors">
+            >
+              <Github className="w-4 h-4" />
+            </a>
+
+            {/* Live Demo */}
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Live Demo"
+              className="w-8 h-8 rounded-md glass flex items-center justify-center hover:text-neon-cyan transition-colors"
+            >
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
         </div>
-        <h3 className="text-xl font-bold mb-2" style={{ transform: "translateZ(15px)" }}>
+
+        {/* Title */}
+        <h3
+          className="text-xl font-bold mb-2"
+          style={{ transform: "translateZ(15px)" }}
+        >
           {project.title}
         </h3>
+
+        {/* Description */}
         <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
           {project.description}
         </p>
+
+        {/* Tech Stack */}
         <div className="flex flex-wrap gap-1.5">
-          {project.tech.map((t) => (
+          {project.tech.map((tech) => (
             <span
-              key={t}
+              key={tech}
               className="font-mono text-[10px] px-2 py-1 rounded-full bg-muted/40 text-muted-foreground"
             >
-              {t}
+              {tech}
             </span>
           ))}
         </div>
@@ -121,8 +171,12 @@ export function Projects() {
   return (
     <Section id="projects" eyebrow="Projects" title="Things I've shipped">
       <div className="grid sm:grid-cols-2 gap-5">
-        {projects.map((p, i) => (
-          <TiltCard key={p.title} project={p} i={i} />
+        {projects.map((project, index) => (
+          <TiltCard
+            key={project.title}
+            project={project}
+            i={index}
+          />
         ))}
       </div>
     </Section>
