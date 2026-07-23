@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
              links: [
     {
       rel: "icon",
-      href: "avatar.jpg",
+      href: "avatarcopy.jpg",
     },
   ],
 
