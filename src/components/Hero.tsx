@@ -54,7 +54,7 @@ export function Hero() {
             </span>
           </a>
           <a
-            href="https://mayanksharma.tiiny.site"
+            href="https://drive.google.com/file/d/1ZC9ctKzy6iHDCSoTQ75SIakg48Cx0eUj/view?usp=sharing"
             target="_blank"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground transition-all hover:bg-foreground/5"
           >
