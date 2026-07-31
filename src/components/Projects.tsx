@@ -31,11 +31,11 @@ const projects = [
     live: "https://mayank-1584.github.io/_rishi_printer",
   },
   {
-    title: "NA",
-    description: "Working on it...",
-    tech: ["Con", "fiden", "tial"],
+    title: "Exam Performance Prediction",
+    description: "An end-to-end machine learning pipeline that predicts a student's math score based on demographic and academic features. Built to practice a production-style ML project structure: data ingestion → data transformation → model training, with reusable logging and exception-handling modules.",
+    tech: ["Scikit-learn", "XGBoost/Catboost", "AWS"],
     accent: "var(--neon-cyan)",
-    github: "#",
+    github: +"https://github.com/mayank-1584/first-end-to-end-ml-project",
     live: "#",
   },
 ];
