@@ -35,7 +35,7 @@ const projects = [
     description: "An end-to-end machine learning pipeline that predicts a student's math score based on demographic and academic features. Built to practice a production-style ML project structure: data ingestion → data transformation → model training, with reusable logging and exception-handling modules.",
     tech: ["Scikit-learn", "XGBoost/Catboost", "AWS"],
     accent: "var(--neon-cyan)",
-    github: +"https://github.com/mayank-1584/first-end-to-end-ml-project",
+    github: "https://github.com/mayank-1584/first-end-to-end-ml-project",
     live: "#",
   },
 ];
