@@ -36,7 +36,7 @@ const projects = [
     tech: ["Scikit-learn", "XGBoost/Catboost", "AWS"],
     accent: "var(--neon-cyan)",
     github: "https://github.com/mayank-1584/first-end-to-end-ml-project",
-    live: "#",
+    live: "https://first-end-to-end-ml-project.onrender.com/predictdata",
   },
 ];
 
